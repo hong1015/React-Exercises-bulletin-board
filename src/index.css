@@ -1,0 +1,136 @@
+@import url(http://fonts.googleapis.com/css?family=Shadows+Into+Light);
+
+body,
+html,
+div.board,
+div#react-container {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+div.board {
+    background-color: brown;
+    width: 100%;
+    height: 100vh;
+    background: #eab92d;
+    background: -moz-radial-gradient(center, ellipse cover, #eab92d 57%, #c79810 99%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(57%, #eab92d), color-stop(99%, #c79810));
+    background: -webkit-radial-gradient(center, ellipse cover, #eab92d 57%, #c79810 99%);
+    background: -o-radial-gradient(center, ellipse cover, #eab92d 57%, #c79810 99%);
+    background: -ms-radial-gradient(center, ellipse cover, #eab92d 57%, #c79810 99%);
+    background: radial-gradient(ellipse at center, #eab92d 57%, #c79810 99%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eab92d', endColorstr='#c79810', GradientType=1);
+    position: relative;
+}
+
+div.note {
+    height: 150px;
+    width: 150px;
+    background-color: yellow;
+    margin: 2px 0;
+    position: absolute;
+    cursor: -webkit-grab;
+    -webkit-box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, .2);
+    box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, .2);
+}
+
+div.note:active {
+    cursor: -webkit-grabbing;
+}
+
+div.note p {
+    font-size: 22px;
+    padding: 5px;
+    font-family: "Shadows Into Light", Arial;
+}
+
+div.note:hover > span {
+    opacity: 1;
+}
+
+div.note > span {
+ 
+
+    opacity: 0;
+    transition: opacity .25s linear;
+}
+
+div.note button {
+    margin: 2px;
+}
+
+div.note > textarea {
+    height: 75%;
+    background: rgba(255, 255, 255, .5);
+}
+.note textarea{
+    width: 100%;
+}
+
+div.board button {
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    box-shadow: 0px 0px 0 0px rgba(0, 0, 0, 0.55);
+}
+
+#add {
+  background-color: #5cb85c;
+  height: 3em;
+}
+
+#edit {
+    background: none;
+    color: #337ab7;
+    bottom: 2px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+}
+
+#save {
+  background-color: #5cb85c;
+}
+
+#remove {
+    background: none;
+    color: #d9534f;
+    position: absolute;
+    right: 2px;
+    top: 24px;
+}
+
+
+.cursor{
+    background: #ff6a00;
+    cursor: pointer;
+    display: block;
+    height: 20px;
+
+}
+.infront, .pinfronts{
+    z-index: 1;
+}
+
+
+.pinfronts::after{
+    background: #ff0000;
+    border-radius: 50%;
+    position: absolute;
+    content:"";
+    height: 10px;
+    left: 0;
+    margin: auto;
+    top: 24px;
+    right: 0;
+    width: 10px;
+    z-index: 1;
+
+}
